@@ -1,0 +1,69 @@
+@import url("https://fonts.googleapis.com/css2?family=Changa&family=Google+Sans+Code:ital,wght,MONO@0,300..800,1;1,300..800,1&display=swap");
+@import "tailwindcss";
+:root {
+  --primary: #00f0ff;
+  --secondary: #ccff00;
+  --tertiary: #fed639;
+  --neutral: #0a0a0b;
+
+  --heading-font: "Changa";
+  --body-font: "Google Sans Code";
+  --lable-font: "Roboto Mono", monospace;
+
+  --text-primary: #fff;
+  --text-secondary: #b9cacb;
+  --muted: #434747aa;
+
+  --border-primary: #00f0ff;
+  --border-secondary: #676f70;
+
+  --link-primary-text: #00f0ff;
+  --link-secondary-text: #b9cacb;
+
+  --btn-primary-text: #00363a;
+  --btn-primary-bg: #00f0ff;
+  --btn-secondary-text: #b9cacb;
+  --btn-secondary-bg: #0a0a0b;
+  /* light mode */
+  /* --btn-secondary-text: #fff;
+  --btn-secondary-bg: #0F172A; */
+}
+
+.light-mode {
+  --primary: #006875;
+  --secondary: #ccff00;
+  --tertiary: #fed639;
+  --neutral: #fff;
+
+  --heading-font: "Changa";
+  --body-font: "Google Sans Code";
+  --lable-font: "Roboto Mono", monospace;
+
+  --text-primary: #191c1e;
+  --text-secondary: #3b494c;
+  --muted: #676f7030;
+
+  --border-primary: #191c1e;
+  --border-secondary: #191c1e;
+
+  --link-primary-text: #0f172a;
+  --link-secondary-text: #64748b;
+
+  --btn-primary-text: #ffffff;
+  --btn-primary-bg: #191c1e;
+  --btn-secondary-text: #191c1e;
+  --btn-secondary-bg: #ffffff;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--body-font);
+  background-color: var(--neutral);
+}
+
+nav {
+  font-family: var(--heading-font);
+}
