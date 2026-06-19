@@ -55,7 +55,7 @@ export default function ProjectsSection() {
                 </p>
                 <div className="flex flex-wrap justify-center gap-5">
                     <a href="#contact" className='bg-(--btn-primary-bg) px-5 py-3 flex gap-2 items-center rounded-xs text-(--btn-primary-text) border border-(--muted)'>ESTABLISH_CONTACT</a>
-                    <a href="" className='bg-(--btn-secondary-bg) px-5 py-3 flex gap-2 items-center rounded-xs text-(--btn-secondary-text) border border-(--muted)'>VIEW RESUME</a>
+                    <a href="Ahmed_Fathi.pdf" className='bg-(--btn-secondary-bg) px-5 py-3 flex gap-2 items-center rounded-xs text-(--btn-secondary-text) border border-(--muted)'>VIEW RESUME</a>
                 </div>
             </div>
         </section>
