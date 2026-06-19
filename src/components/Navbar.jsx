@@ -37,7 +37,7 @@ export default function Navbar() {
                             isLightMode ? <FaSun className='text-(--tertiary)' /> : <FaMoon className='text-(--btn-secondary-text)' />
                         }
                     </button>
-                    <a href='Ahmed-Fathi-ATS.pdf' target='_blank' className="bg-(--btn-primary-bg) text-(--btn-primary-text) hidden lg:flex text-sm px-6 py-2">RESUME</a>
+                    <a href='Ahmed_Fathi.pdf' target='_blank' className="bg-(--btn-primary-bg) text-(--btn-primary-text) hidden lg:flex text-sm px-6 py-2">RESUME</a>
                     <button onClick={toggleMenue} className='flex lg:hidden items-center justify-center hover:cursor-pointer'>
                         <IoIosMenu className='text-(--text-primary) text-2xl'/>
                     </button>
