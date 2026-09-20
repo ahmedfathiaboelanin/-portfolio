@@ -1,56 +1,61 @@
-import React from 'react'
-import { FaPaintBrush, FaServer } from 'react-icons/fa'
+import { FaPaintBrush, FaServer, FaArrowRight } from 'react-icons/fa'
 import { MdTerminal } from 'react-icons/md'
 import Tag from '../components/Tag'
 import ServicesCard from '../components/ServicesCard'
 
+const STATS = [
+    { value: '1+', label: 'YEARS EXP' },
+    { value: '10+', label: 'PROJECTS' },
+    { value: '3+', label: 'CLIENTS' },
+]
+
 function HomeSection() {
     return (
-        <section className="w-full flex items-center justify-center overflow-x-hidden relative h-full" id='home' >
-            <div className="w-100 h-100 rounded-full bg-(--primary) shadow-[180px_20px_1500px_rgba(0,240,255,.9)] absolute -left-100 top-40"></div>
-
-            <div className="flex justify-evenly gap-10 flex-wrap lg:flex-nowrap w-full h-full  relative z-10  px-5 py-20 md:p-20">
-                <div className="flex flex-3/2 flex-col gap-4">
-                    <Tag title="Hello, I'm Ahmed" />
-                    <h2 className="text-5xl font-semibold text-(--text-primary)">
-                        Building the future,
-                    </h2>
-                    <h2 className="text-5xl font-semibold text-(--primary)">
-                        one line at a time
-                    </h2>
-                    <p className="text-lg text-(--text-secondary) max-w-md">A passionate Frontend Developer with a knack for crafting engaging and user-friendly web experiences.</p>
-                    <div className="flex flex-wrap gap-4">
-                        <a href='#projects' className="hover:cursor-pointer border-(--border-secondary) border bg-(--btn-primary-bg) text-(--btn-primary-text) px-6 py-2 w-max">VIEW MY WORK</a>
-                        <a href='#contact' className="hover:cursor-pointer border-(--border-secondary) border text-(--btn-secondary-text) px-6 py-2 w-max">LET'S CONNECT</a>
+        <section className="relative flex h-full w-full items-center justify-center overflow-x-clip" id='home' >
+            <div className="container-x section-pad relative z-10 flex w-full flex-col items-stretch justify-between gap-10 sm:gap-12 lg:flex-row lg:items-center">
+                <div className="flex min-w-0 flex-1 flex-col gap-4 sm:gap-5">
+                    <div className="animate-rise min-w-0">
+                        <Tag title="Hello, I'm Ahmed — Frontend Developer" />
+                    </div>
+                    <h1 className="h-display animate-rise animate-rise-1 font-semibold">
+                        <span className="block text-(--text-primary)">Building the future,</span>
+                        <span className="text-gradient block">one line at a time</span>
+                    </h1>
+                    <p className="animate-rise animate-rise-2 max-w-md text-[15px] leading-relaxed text-pretty text-(--text-secondary) sm:text-base md:text-lg">
+                        A passionate Frontend Developer with a knack for crafting engaging,
+                        fast and user-friendly web experiences.
+                    </p>
+                    <div className="animate-rise animate-rise-3 flex flex-col gap-3 pt-1 min-[420px]:flex-row min-[420px]:flex-wrap">
+                        <a href='#projects' className="btn-primary group inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 text-center text-[13px] font-semibold tracking-wider sm:w-max sm:px-7 sm:text-sm">
+                            VIEW MY WORK
+                            <FaArrowRight className="text-xs transition-transform duration-200 group-hover:translate-x-1" />
+                        </a>
+                        <a href='#contact' className="btn-ghost inline-flex items-center justify-center rounded-full px-6 py-3 text-center text-[13px] font-semibold tracking-wider sm:w-max sm:px-7 sm:text-sm">LET'S CONNECT</a>
                     </div>
 
-                    <div className="max-w-120 h-px bg-(--muted) mt-10"></div>
-                    <div className="flex gap-4">
-                        <div className="stats flex flex-col gap-1 pr-5 border-r border-(--muted) ">
-                            <h3 className="text-2xl  text-(--text-primary)">1+</h3>
-                            <p className="text-(--text-secondary) text-xs">YEARS EXP
-                            </p>
-                        </div>
-                        <div className="stats flex flex-col gap-1 pr-5 border-r border-(--muted) ">
-                            <h3 className="text-2xl text-(--text-primary)">10+</h3>
-                            <p className="text-(--text-secondary) text-xs">PROJECTS</p>
-                        </div>
-                        <div className="stats flex flex-col gap-1 pr-5 ">
-                            <h3 className="text-2xl text-(--text-primary)">3+</h3>
-                            <p className="text-(--text-secondary) text-xs">CLIENTS</p>
-                        </div>
+                    <div className="animate-rise animate-rise-4 mt-6 max-w-md sm:mt-8">
+                        <div className="h-px w-full bg-gradient-to-r from-(--border-primary) via-(--muted) to-transparent"></div>
+                        <dl className="grid grid-cols-3 gap-4 pt-5 sm:gap-8 sm:pt-6">
+                            {STATS.map((stat) => (
+                                <div key={stat.label} className="flex min-w-0 flex-col gap-1">
+                                    <dt className="order-2 font-mono text-[10px] tracking-[0.16em] text-(--text-secondary) sm:text-[11px] sm:tracking-[0.2em]">{stat.label}</dt>
+                                    <dd className="order-1 text-2xl font-semibold text-(--text-primary) tabular-nums sm:text-3xl">{stat.value}</dd>
+                                </div>
+                            ))}
+                        </dl>
                     </div>
-
                 </div>
-                <div className="relative">
-                    <ServicesCard
-                        title="Web developer"
-                        description="Building modular, robust foundations for web-scale applications."
-                        icon={MdTerminal}
-                        bgText="JS"
-                    />
-                    
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-5 mt-5 w-full">
+
+                <div className="animate-rise animate-rise-2 w-full min-w-0 flex-1 lg:max-w-md xl:max-w-lg">
+                    <div className="animate-float-slow">
+                        <ServicesCard
+                            title="Web Developer"
+                            description="Building modular, robust foundations for web-scale applications."
+                            icon={MdTerminal}
+                            bgText="JS"
+                        />
+                    </div>
+                    <div className="mt-4 grid w-full grid-cols-1 gap-4 min-[560px]:grid-cols-2 sm:mt-5 sm:gap-5">
                         <ServicesCard
                             title="Front-end Dev"
                             description="Crafting visually stunning and intuitive user interfaces that captivate and engage."
@@ -58,18 +63,14 @@ function HomeSection() {
                             bgText="UI"
                         />
                         <ServicesCard
-                            title="BACK-END DEV"
+                            title="Back-end Dev"
                             description="Designing and implementing scalable backend systems and APIs."
                             icon={FaServer}
                             bgText="API"
                         />
-                        
                     </div>
                 </div>
             </div>
-
-
-
         </section>
     )
 }
