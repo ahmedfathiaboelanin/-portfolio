@@ -34,7 +34,20 @@ const PROJECTS = [
             'React',
             'Vite',
             'Tailwind css',
-            'Redux'
+            'Redux',
+            'TS'
+        ]
+    },
+    {
+        title: "TRANSRECIO",
+        description: "Neural acoustics turn your speech into perfectly punctuated text in real time — Arabic & English supported.",
+        image: "voice-text.png",
+        link: "http://voice-to-text-pied.vercel.app/",
+        code: "https://github.com/ahmedfathiaboelanin/voice-to-text",
+        tech: [
+            'React',
+            'Vite',
+            'Tailwind css',
         ]
     },
     {
@@ -57,18 +70,18 @@ const PROJECTS = [
             'JS'
         ]
     },
-    {
-        title: "NOTFLIX",
-        description: "A Netflix-inspired streaming UI clone showcasing modern design patterns, smooth animations, and responsive layout techniques for media platforms.",
-        image: "6.png",
-        link: "https://ahmedfathiaboelanin.github.io/NOTFLIX/",
-        code: "https://github.com/ahmedfathiaboelanin/NOTFLIX",
-        tech: [
-            'HTML',
-            'CSS',
-            'JS'
-        ]
-    },
+    // {
+    //     title: "NOTFLIX",
+    //     description: "A Netflix-inspired streaming UI clone showcasing modern design patterns, smooth animations, and responsive layout techniques for media platforms.",
+    //     image: "6.png",
+    //     link: "https://ahmedfathiaboelanin.github.io/NOTFLIX/",
+    //     code: "https://github.com/ahmedfathiaboelanin/NOTFLIX",
+    //     tech: [
+    //         'HTML',
+    //         'CSS',
+    //         'JS'
+    //     ]
+    // },
 ]
 
 
