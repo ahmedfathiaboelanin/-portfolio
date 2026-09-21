@@ -25,15 +25,16 @@ const PROJECTS = [
     //     ]
     // },
     {
-        title: "E-commerce",
+        title: "Supplements Shop",
         description: "A modern e-commerce web application featuring product listings, shopping cart functionality, and a responsive user interface designed for a seamless online shopping experience.",
-        image: "1.png",
-        link: "https://ahmedfathiaboelanin.github.io/E-commerce/",
-        code: "https://github.com/ahmedfathiaboelanin/E-commerce",
+        image: "supplements.png",
+        link: "https://demo-supplements-shop.vercel.app/",
+        code: "https://github.com/ahmedfathiaboelanin/Supplements-store",
         tech: [
-            'HTML',
-            'CSS',
-            'JS'
+            'React',
+            'Vite',
+            'Tailwind css',
+            'Redux'
         ]
     },
     {
