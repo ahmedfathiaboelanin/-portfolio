@@ -12,18 +12,18 @@ const PROJECTS = [
             'MYSQL'
         ]
     },
-    // {
-    //     title: "MEDIX AI",
-    //     description: "AI POWERED MEDICINE : TRANSFORMING HEALTHCARE WITH INNOVATIVE TECHNOLOGICAL SOLUTIONS",
-    //     image: "Medxai.png",
-    //     link: "https://cawedha.vercel.app/",
-    //     code: "https://github.com/ahmedfathiaboelanin/Cawedha",
-    //     tech: [
-    //         'REACT JS',
-    //         'LARAVEL',
-    //         'MYSQL'
-    //     ]
-    // },
+    {
+        title: "FITNESS COACH",
+        description: "A Netflix-inspired streaming UI clone showcasing modern design patterns, smooth animations, and responsive layout techniques for media platforms.",
+        image: "online-coach.png",
+        link: "https://mohammad-elsum.vercel.app/",
+        code: "https://github.com/ahmedfathiaboelanin/Fitness-Cooach",
+        tech: [
+            'React',
+            'Tailwind',
+            'Vite'
+        ]
+    },
     {
         title: "Supplements Shop",
         description: "A modern e-commerce web application featuring product listings, shopping cart functionality, and a responsive user interface designed for a seamless online shopping experience.",
@@ -70,18 +70,6 @@ const PROJECTS = [
             'JS'
         ]
     },
-    // {
-    //     title: "NOTFLIX",
-    //     description: "A Netflix-inspired streaming UI clone showcasing modern design patterns, smooth animations, and responsive layout techniques for media platforms.",
-    //     image: "6.png",
-    //     link: "https://ahmedfathiaboelanin.github.io/NOTFLIX/",
-    //     code: "https://github.com/ahmedfathiaboelanin/NOTFLIX",
-    //     tech: [
-    //         'HTML',
-    //         'CSS',
-    //         'JS'
-    //     ]
-    // },
 ]
 
 
