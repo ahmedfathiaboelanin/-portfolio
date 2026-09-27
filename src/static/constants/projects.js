@@ -1,5 +1,19 @@
 const PROJECTS = [
     {
+        title: "Dar Al-Hoqooq",
+        description: "Dar Al-Hoqooq (dar-7qook | دار الحقوق لخدمات الأعمال) is a unified bilingual (Arabic / English) platform for company formation, legal, government, investor, wage-protection, premium-residency, consultant, and advisory services in Saudi Arabia. Customers can browse services and packages, order in one click via a saved request + WhatsApp handoff, and get help via FAQ, blog, and support center, while admins manage everything from a full control panel.",
+        image: "daroflaw.png",
+        link: "https://daroflaw.com/",
+        code: "https://github.com/ahmedfathiaboelanin/",
+        tech: [
+            'REACT JS',
+            'FRAMER MOTION',
+            'TAILWIND CSS',
+            'LARAVEL',
+            'MYSQL'
+        ]
+    },
+    {
         title: "CAWEDHA",
         description: "An online course platform that enables users to browse, enroll in, and manage educational content, featuring a clean UI, responsive design, and scalable front-end architecture.",
         image: "2.png",
@@ -10,18 +24,6 @@ const PROJECTS = [
             'TAILWIND CSS',
             'LARAVEL',
             'MYSQL'
-        ]
-    },
-    {
-        title: "FITNESS COACH",
-        description: "A Netflix-inspired streaming UI clone showcasing modern design patterns, smooth animations, and responsive layout techniques for media platforms.",
-        image: "online-coach.png",
-        link: "https://mohammad-elsum.vercel.app/",
-        code: "https://github.com/ahmedfathiaboelanin/Fitness-Cooach",
-        tech: [
-            'React',
-            'Tailwind',
-            'Vite'
         ]
     },
     {
@@ -36,6 +38,18 @@ const PROJECTS = [
             'Tailwind css',
             'Redux',
             'TS'
+        ]
+    },
+    {
+        title: "FITNESS COACH",
+        description: "A Netflix-inspired streaming UI clone showcasing modern design patterns, smooth animations, and responsive layout techniques for media platforms.",
+        image: "online-coach.png",
+        link: "https://mohammad-elsum.vercel.app/",
+        code: "https://github.com/ahmedfathiaboelanin/Fitness-Cooach",
+        tech: [
+            'React',
+            'Tailwind',
+            'Vite'
         ]
     },
     {
