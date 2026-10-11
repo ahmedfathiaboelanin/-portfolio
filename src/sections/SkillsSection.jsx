@@ -2,34 +2,7 @@ import Tag from '../components/Tag'
 import TechCard from '../components/TechCard'
 import { FaTools, FaCode, FaServer } from 'react-icons/fa'
 import ToolTag from '../components/ToolTag'
-
-const tools = [
-    "REACT ICONS",
-    "ZUSTAND",
-    "MONGOOSE",
-    "JWT",
-    "VS CODE",
-    "POSTMAN",
-    "XAMPP",
-    "GIT"
-]
-
-const frontendSkills = [
-    { title: "HTML", percentage: '95%' },
-    { title: "CSS", percentage: '90%' },
-    { title: "JS", percentage: '90%' },
-    { title: "REACT JS", percentage: '90%' },
-    { title: "TAILWIND CSS", percentage: '90%' },
-    { title: "NEXT JS", percentage: '80%' },
-]
-
-const backendSkills = [
-    { title: "NODE JS", percentage: '85%' },
-    { title: "EXPRESS JS", percentage: '80%' },
-    { title: "MONGODB", percentage: '80%' },
-    { title: "LARAVEL", percentage: '80%' },
-    { title: "MYSQL", percentage: '75%' },
-]
+import { useSkills } from '../lib/usePortfolio'
 
 function SkillPanel({ icon: Icon, title, subtitle, children }) {
     return (
@@ -49,6 +22,7 @@ function SkillPanel({ icon: Icon, title, subtitle, children }) {
 }
 
 export default function SkillsSection() {
+    const { frontend: frontendSkills, backend: backendSkills, tools } = useSkills()
     return (
         <section id='skills' className="relative flex h-full w-full flex-col overflow-x-clip" >
             <div className="container-x section-pad relative z-10">

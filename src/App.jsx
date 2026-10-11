@@ -1,14 +1,18 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
-import './App.css'
+import { Suspense, lazy } from 'react'
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
 import Navbar from './components/Navbar'
 import HomeSection from './sections/HomeSection'
 import SkillsSection from './sections/SkillsSection'
 import ProjectsSection from './sections/ProjectsSection'
 import ContactSection from './sections/ContactSection'
 import Footer from './components/Footer'
+import './App.css'
 
+const AdminLogin = lazy(() => import('./pages/AdminLogin'))
+const AdminDashboard = lazy(() => import('./pages/AdminDashboard'))
 
-function App() {
+function Site() {
   return (
     <main className="relative min-h-screen w-full overflow-clip bg-(--neutral) text-(--text-primary)">
       {/* Ambient background — grid + soft glows, non-interactive.
@@ -29,6 +33,21 @@ function App() {
         <Footer />
       </div>
     </main>
+  )
+}
+
+function App() {
+  return (
+    <BrowserRouter>
+      <Suspense fallback={<main className="grid min-h-screen place-items-center bg-(--neutral) text-(--text-secondary)">Loading…</main>}>
+        <Routes>
+          <Route path="/" element={<Site />} />
+          <Route path="/admin/login" element={<AdminLogin />} />
+          <Route path="/admin" element={<AdminDashboard />} />
+          <Route path="*" element={<Navigate to="/" replace />} />
+        </Routes>
+      </Suspense>
+    </BrowserRouter>
   )
 }
 

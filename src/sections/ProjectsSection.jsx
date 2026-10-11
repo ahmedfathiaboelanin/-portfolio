@@ -1,6 +1,6 @@
 import { FaCode, FaEye, FaArrowRight } from 'react-icons/fa'
 import Tag from '../components/Tag'
-import PROJECTS from '../static/constants/projects'
+import { useProjects, useProfile } from '../lib/usePortfolio'
 
 function ProjectCard({ project, featured = false }) {
     return (
@@ -40,6 +40,8 @@ function ProjectCard({ project, featured = false }) {
 }
 
 export default function ProjectsSection() {
+    const { projects: PROJECTS } = useProjects()
+    const { profile } = useProfile()
     if (!PROJECTS.length) return null;
     const [featured, ...rest] = PROJECTS;
 
@@ -53,7 +55,7 @@ export default function ProjectsSection() {
                             <span className="text-(--text-primary)">SOME OF MY </span>
                             <span className="text-gradient">PROJECTS</span>
                         </h2>
-                        <a target='_blank' rel="noreferrer" href="https://github.com/ahmedfathiaboelanin" className="btn-ghost group inline-flex min-h-11 w-max items-center gap-2 rounded-full px-5 py-2.5 text-xs font-semibold tracking-wider">
+                        <a target='_blank' rel="noreferrer" href={profile.github_url} className="btn-ghost group inline-flex min-h-11 w-max items-center gap-2 rounded-full px-5 py-2.5 text-xs font-semibold tracking-wider">
                             <FaEye /> VIEW ALL REPOS
                             <FaArrowRight className="text-[10px] transition-transform duration-200 group-hover:translate-x-1" />
                         </a>

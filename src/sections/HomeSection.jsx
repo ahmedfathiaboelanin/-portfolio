@@ -2,28 +2,28 @@ import { FaPaintBrush, FaServer, FaArrowRight } from 'react-icons/fa'
 import { MdTerminal } from 'react-icons/md'
 import Tag from '../components/Tag'
 import ServicesCard from '../components/ServicesCard'
-
-const STATS = [
-    { value: '1+', label: 'YEARS EXP' },
-    { value: '10+', label: 'PROJECTS' },
-    { value: '3+', label: 'CLIENTS' },
-]
+import { useProfile } from '../lib/usePortfolio'
 
 function HomeSection() {
+    const { profile } = useProfile()
+    const STATS = [
+        { value: profile.years_exp, label: 'YEARS EXP' },
+        { value: profile.projects_count, label: 'PROJECTS' },
+        { value: profile.clients_count, label: 'CLIENTS' },
+    ]
     return (
         <section className="relative flex h-full w-full items-center justify-center overflow-x-clip" id='home' >
             <div className="container-x section-pad relative z-10 flex w-full flex-col items-stretch justify-between gap-10 sm:gap-12 lg:flex-row lg:items-center">
                 <div className="flex min-w-0 flex-1 flex-col gap-4 sm:gap-5">
                     <div className="animate-rise min-w-0">
-                        <Tag title="Hello, I'm Ahmed — Frontend Developer" />
+                        <Tag title={profile.tagline} />
                     </div>
                     <h1 className="h-display animate-rise animate-rise-1 font-semibold">
-                        <span className="block text-(--text-primary)">Building the future,</span>
-                        <span className="text-gradient block">one line at a time</span>
+                        <span className="block text-(--text-primary)">{profile.hero_title_line1}</span>
+                        <span className="text-gradient block">{profile.hero_title_line2}</span>
                     </h1>
                     <p className="animate-rise animate-rise-2 max-w-md text-[15px] leading-relaxed text-pretty text-(--text-secondary) sm:text-base md:text-lg">
-                        A passionate Frontend Developer with a knack for crafting engaging,
-                        fast and user-friendly web experiences.
+                        {profile.hero_description}
                     </p>
                     <div className="animate-rise animate-rise-3 flex flex-col gap-3 pt-1 min-[420px]:flex-row min-[420px]:flex-wrap">
                         <a href='#projects' className="btn-primary group inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 text-center text-[13px] font-semibold tracking-wider sm:w-max sm:px-7 sm:text-sm">

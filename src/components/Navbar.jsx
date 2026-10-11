@@ -83,6 +83,8 @@ export default function Navbar() {
                     ))}
                 </div>
                 <div className="flex shrink-0 items-center gap-2 sm:gap-3">
+                    <a href='/admin' title="Dashboard"
+                        className="hidden rounded-full border border-(--card-border) bg-(--surface)/70 px-4 py-2 font-mono text-[11px] tracking-[0.18em] text-(--text-secondary) backdrop-blur-xl hover:border-(--border-primary) hover:text-(--text-primary) lg:inline-flex">ADMIN</a>
                     <button
                         onClick={toggleTheme}
                         aria-label="Toggle theme"
@@ -118,6 +120,7 @@ export default function Navbar() {
                         </a>
                     ))}
                     <a href='Ahmed_Fathi.pdf' target='_blank' rel="noreferrer" className="btn-primary mt-2 rounded-xl px-4 py-3.5 text-center text-sm font-semibold tracking-wider">RESUME</a>
+                    <a href='/admin' className="mt-1 rounded-xl px-4 py-3.5 text-center font-mono text-xs tracking-[0.2em] text-(--text-secondary)">ADMIN DASHBOARD →</a>
                 </div>
             </div>
         </header>
